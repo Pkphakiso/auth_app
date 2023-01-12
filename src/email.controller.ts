@@ -10,7 +10,7 @@ export class EmailController {
         // = 
         await this.mailService.sendMail({
             to: toemail,
-            from:"phakiso.ngwevu@gmail.com",
+            from:"test@gmail.com",
             subject:' Simple Email Text',
             text:'welcom to my mail... This was sent',
             
