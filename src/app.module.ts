@@ -5,9 +5,7 @@ import { AuthModule } from './auth/auth.module';
 import { User } from './user/entities/user.entity';
 import { MailerModule } from '@nestjs-modules/mailer';
 import { EmailController } from './email.controller';
-
-
-
+import {passKey} from  './utils/constants';
 
 @Module({
   imports: [
@@ -28,7 +26,7 @@ import { EmailController } from './email.controller';
         host:'smtp.sendgrid.net',
         auth:{
           user:'apikey',
-          pass:''
+          pass:passKey
         }
       }    
     }), 

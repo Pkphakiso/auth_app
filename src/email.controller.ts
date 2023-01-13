@@ -1,5 +1,6 @@
 import { MailerService } from '@nestjs-modules/mailer';
 import { Controller, Get, Post, Query } from '@nestjs/common';
+import {passKey, emailFrom} from  './utils/constants';
 
 @Controller('email')
 export class EmailController {
@@ -10,7 +11,7 @@ export class EmailController {
         // = 
         await this.mailService.sendMail({
             to: toemail,
-            from:"test@gmail.com",
+            from: emailFrom,
             subject:' Simple Email Text',
             text:'welcom to my mail... This was sent',
             
